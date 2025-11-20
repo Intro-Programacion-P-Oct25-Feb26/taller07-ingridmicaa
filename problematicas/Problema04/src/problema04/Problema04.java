@@ -22,26 +22,27 @@ public class Problema04 {
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
-        int denominador = 1;
-        int limite = 15;
-        double signo = 1;
-        double resultado = 0;
-        String reporte = "";
+        int numero= 1;
+        int contador = 1;
+        String fraccion = "";
+        String mensaje ="";
+        
 
-        while (denominador <= limite) {
+        while (contador <= 15) {
+            numero= numero*-1;
+            contador= (contador + 2);
+            
 
-            if (signo == 1) {
-                reporte = reporte + "1/" + denominador;
+            if (numero == 1) {
+                fraccion = String.format(" + %s/%s", numero, contador);
             } else {
-                reporte = reporte + " - 1/" + denominador;
-
-                resultado = resultado + signo * (1.0 / denominador);
-                signo = signo * -1;
-
-                denominador = denominador + 2;
+                fraccion = String.format(" + %s/%s", numero, contador);
+            }
+                mensaje = String.format("%s %s", mensaje, fraccion);
+               
 
             }
-        }
-System.out.printf("%s", reporte);
+        
+System.out.printf("1", mensaje);
     }
 }
