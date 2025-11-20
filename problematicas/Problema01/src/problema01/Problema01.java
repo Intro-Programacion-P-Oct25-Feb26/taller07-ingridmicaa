@@ -28,6 +28,7 @@ public class Problema01 {
         double estatura;
         int contador = 1;
         String mensaje_final = "";
+        String mensaje_ed = "";
         double prom_edades;
         double prom_estatura;
         double suma_ed = 0;
@@ -47,27 +48,32 @@ public class Problema01 {
             estatura = entrada.nextDouble();
 
             suma_ed = suma_ed + edad;
-            prom_edades = suma_ed / 5;
             suma_es = suma_es + estatura;
-            prom_estatura = suma_es / 5;
 
-            mensaje_final = String.format("\n "
-                    + "%s- %s -, edad %s, "
-                    + "estatura %s\n Listado de edades\n %s "
-                    + "Promedio de edades: %s\n "
-                    + "Promedio de estaturas: %s\n", mensaje_final,
+            mensaje_final = String.format("%s%d. %s -%s-, edad %d, estatura %.2f\n",
+                    mensaje_final,
+                    contador,
                     nombre,
                     posicion,
                     edad,
-                    estatura,
-                    edad,
-                    prom_edades,
-                    prom_estatura);
+                    estatura);
 
-            entrada.nextLine();
+            mensaje_ed = String.format("%s%d\n",
+                    mensaje_ed,
+                    edad);
+
             contador = contador + 1;
-
         }
-        System.out.printf("Listado de jugadores%s\n", mensaje_final "\nListado de edades");
+
+        prom_edades = suma_ed / 5;
+        prom_estatura = suma_es / 5;
+
+        System.out.printf("%s\n%s\nPromedio de edades: %.1f\nPromedio de "
+                + "estaturas: %.2f\n",
+                mensaje_final,
+                mensaje_ed,
+                prom_edades,
+                prom_estatura);
+
     }
 }

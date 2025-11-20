@@ -42,6 +42,6 @@ public class Problema04 {
 
             }
         }
-System.out.printf("%s", );
+System.out.printf("%s", reporte);
     }
 }
