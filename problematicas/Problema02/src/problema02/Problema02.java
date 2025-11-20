@@ -27,7 +27,7 @@ public class Problema02 {
         String mensaje = "";
 
         while (numero <= 110) {
-            mensaje = String.format("%s\n%S", mensaje, numero);
+            mensaje = String.format("%s\n%s", mensaje, numero);
 
             numero = numero + valor_suma;
             valor_suma = valor_suma + 2;
