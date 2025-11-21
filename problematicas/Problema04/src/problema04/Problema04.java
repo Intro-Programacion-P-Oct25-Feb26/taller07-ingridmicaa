@@ -26,23 +26,23 @@ public class Problema04 {
         int contador = 1;
         String fraccion = "";
         String mensaje ="";
+        double resultado = 1;
         
 
         while (contador <= 15) {
             numero= numero*-1;
             contador= (contador + 2);
-            
+            resultado = resultado + ((double) numero / contador);
 
-            if (numero == 1) {
-                fraccion = String.format(" + %s/%s", numero, contador);
+             if (numero == 1) {
+                fraccion = String.format("+ %d/%d", numero, contador);
             } else {
-                fraccion = String.format(" + %s/%s", numero, contador);
+                fraccion = String.format("%d/%d", numero, contador);
             }
-                mensaje = String.format("%s %s", mensaje, fraccion);
-               
 
+            mensaje = String.format("%s %s", mensaje, fraccion);
             }
-        
-System.out.printf("1", mensaje);
-    }
+          System.out.printf("1%s= ",mensaje);
+          System.out.printf("%.4f", resultado);
+        }
 }
