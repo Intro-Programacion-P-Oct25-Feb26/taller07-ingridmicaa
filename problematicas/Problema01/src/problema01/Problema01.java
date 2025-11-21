@@ -35,6 +35,7 @@ public class Problema01 {
         double suma_es = 0;
 
         while (contador <= 5) {
+            
             System.out.println("Ingrese nombre del jugador");
             nombre = entrada.nextLine();
 
@@ -46,6 +47,7 @@ public class Problema01 {
 
             System.out.println("Ingrese estatura del jugador");
             estatura = entrada.nextDouble();
+            entrada.nextLine();
 
             suma_ed = suma_ed + edad;
             suma_es = suma_es + estatura;
@@ -68,7 +70,8 @@ public class Problema01 {
         prom_edades = suma_ed / 5;
         prom_estatura = suma_es / 5;
 
-        System.out.printf("%s\n%s\nPromedio de edades: %.1f\nPromedio de "
+        System.out.printf("Listado de Jugadores\n%sListado de Edades\n"
+                + "%sPromedio de edades: %.1f\nPromedio de "
                 + "estaturas: %.2f\n",
                 mensaje_final,
                 mensaje_ed,
